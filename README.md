@@ -1,16 +1,28 @@
 # EduApp
 
-A new Flutter project.
+An App that detects objects in Images. Works on Android & Web 
 
-## Getting Started
+## Features
+- Select Image from Gallery
+- Upload Image for processing
+- Identify objects in Image
 
-This project is a starting point for a Flutter application.
+## Tech Used
+**Server**: Firebase Storage, Firebase Firestore (TODO: Add Firebase Auth)
+**Client**: Flutter (TODO: Add Provider)
 
-A few resources to get you started if this is your first Flutter project:
+## Installation
+After cloning this repository, migrate to ```edu_app``` folder. Then, follow the following steps:
+- Create Firebase project (### TODO: Create Firebase dev/prod project)
+- Enable Authentication
+- Make Firestore Rules
+- Create Android, iOS & Web Apps
+- Create .env (see .env.example)
+- Populate Firebase keys in .env
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Run the following commands to run your app:
+```bash
+  flutter pub get
+  flutter run
+  flutter run -d chrome --web-renderer html (to see the best output)
+```
