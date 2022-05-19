@@ -3,16 +3,16 @@
 An App that detects image labels. Works on Android & Web 
 
 ### Features
-- Select image from gallery
-- Display image
-- Display label(s)
+- [x] Select image from gallery
+- [ ] Identify image with ML
+- [ ] Display image and labels
 
 ### Installation
 After cloning this repository, migrate to ```edu_app``` folder. Then, follow the following steps:
-- Setup Firebase project | [video_1](https://www.youtube.com/watch?v=EXp0gq9kGxI) - [video_2](https://www.youtube.com/watch?v=LnpGU8vj7TI) 
+- Setup Firebase project | [example 1](https://www.youtube.com/watch?v=EXp0gq9kGxI) | [example 2](https://www.youtube.com/watch?v=LnpGU8vj7TI) 
     - Create Firebase project
     - Configure Firebase on ```edu_app``` for Android and Web
-- Optional: Setup enviroment variables | [video](https://youtu.be/xTxwjbcd8kA)
+- Optional: Setup enviroment variables | [example](https://youtu.be/xTxwjbcd8kA)
     - Create .env (see .env.example)
     - Populate Firebase keys in .env
 - Run your app:
@@ -23,14 +23,10 @@ After cloning this repository, migrate to ```edu_app``` folder. Then, follow the
 ```
 
 ### Tech Stack
-**Server**: 
-    - Firebase
-        - [intro](https://youtu.be/EXp0gq9kGxI) | [docs](https://firebase.google.com/docs?authuser=1&hl=en)
+**Server**:
+- Firebase: [intro](https://youtu.be/EXp0gq9kGxI) | [docs](https://firebase.google.com/docs?authuser=1&hl=en)
 
 **Client**: 
-    - Flutter (cross-platform UI development kit create by Google)
-        - [intro](https://youtu.be/l-YO9CmaSUM) | [docs](https://docs.flutter.dev/)
-    - GetX (light and powerful framework for flutter)
-        - [intro](https://youtu.be/V0oxG3tWiwk) | [docs](https://chornthorn.github.io/getx-docs/)
-    - ML Kit (machine learning kit for mobile app created by Google)
-        - [intro](https://youtu.be/CQ8iEqblWtY) | [docs](https://developers.google.com/ml-kit/)
+- Flutter (cross-platform UI development kit create by Google): [intro](https://youtu.be/l-YO9CmaSUM) | [docs](https://docs.flutter.dev/) 
+- GetX (light and powerful framework for flutter): [intro](https://youtu.be/V0oxG3tWiwk) | [docs](https://chornthorn.github.io/getx-docs/) 
+- ML Kit (machine learning kit for mobile app created by Google): [intro](https://youtu.be/CQ8iEqblWtY) | [docs](https://developers.google.com/ml-kit/) 
