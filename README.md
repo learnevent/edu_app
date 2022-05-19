@@ -9,10 +9,10 @@ An App that detects objects in Images. Works on Android & Web
 
 ### Installation
 After cloning this repository, migrate to ```edu_app``` folder. Then, follow the following steps:
-- Setup Firebase project [video resource](https://www.youtube.com/watch?v=LnpGU8vj7TI)
+- Setup Firebase project | [video resource](https://www.youtube.com/watch?v=LnpGU8vj7TI)
     - Create Firebase project
     - Configure Firebase on ```edu_app``` for Android and Web
-- Setup enviroment variables [video resource](https://youtu.be/xTxwjbcd8kA)
+- Setup enviroment variables | [video resource](https://youtu.be/xTxwjbcd8kA)
     - Create .env (see .env.example)
     - Populate Firebase keys in .env
 - Run your app:
