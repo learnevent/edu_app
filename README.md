@@ -9,14 +9,11 @@ An App that detects objects in Images. Works on Android & Web
 
 ### Installation
 After cloning this repository, migrate to ```edu_app``` folder. Then, follow the following steps:
-- Create Firebase project (### TODO: Create Firebase dev/prod project)
-- Enable Authentication
-- Make Firestore Rules
-- Create Android, iOS & Web Apps
+- Create Firebase project
+- Configure Firebase on ```edu_app``` for Android and Web
 - Create .env (see .env.example)
 - Populate Firebase keys in .env
-
-Run the following commands to run your app:
+- Run your app:
 ```bash
   flutter pub get
   flutter run
@@ -24,6 +21,5 @@ Run the following commands to run your app:
 ```
 
 ### Tech Stack
-**Server**: Firebase Storage, Firebase Firestore (TODO: Add Firebase Auth)
-
-**Client**: Flutter (TODO: Add Provider)
+**Server**: Firebase Storage, Firebase Firestore
+**Client**: Flutter, Provider
