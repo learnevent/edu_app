@@ -3,9 +3,9 @@
 An App that detects objects in Images. Works on Android & Web 
 
 ### Features
-- Select Image from Gallery
-- Upload Image for processing
-- Identify objects in Image
+- Select image from gallery
+- Upload image for processing
+- Identify objects in image
 
 ### Installation
 After cloning this repository, migrate to ```edu_app``` folder. Then, follow the following steps:
