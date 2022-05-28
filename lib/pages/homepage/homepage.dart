@@ -25,39 +25,36 @@ class _HomePageState extends State<HomePage> {
         centerTitle: true,
         title: const Text("Learn Event"),
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            if (imageFile == null)
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
-                  Text(
-                    'Upload an Image',
-                    style: TextStyle(fontSize: 40),
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Text(
-                    'Select gallery or camera',
-                    style: TextStyle(fontSize: 30),
-                    textAlign: TextAlign.left,
-                  ),
-                ],
+      body: Center(
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              if (imageFile == null)
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: const [
+                    Text(
+                      'Select Option',
+                      style: TextStyle(fontSize: 25),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    )
+                  ],
+                ),
+              if (imageFile != null)
+                SizedBox(
+                  height: 300,
+                  width: 600,
+                  child: Image.file(File(imageFile!.path)),
+                ),
+              Text(
+                scannedText,
+                style: const TextStyle(fontSize: 25),
+                textAlign: TextAlign.left,
               ),
-            if (imageFile != null)
-              SizedBox(
-                height: 300,
-                width: 600,
-                child: Image.file(File(imageFile!.path)),
-              ),
-            Text(
-              scannedText,
-              style: const TextStyle(fontSize: 25, color: Colors.white),
-              textAlign: TextAlign.left,
-            ),
-          ],
+            ],
+          ),
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(

@@ -3,9 +3,10 @@
 An App that detects image labels. Works on Android & Web 
 
 ### Features
-- [x] Select image from gallery
-- [ ] Identify image with ML
-- [ ] Display image and labels
+- [x] Select image from gallery/camera
+- [x] Process with ML_kit to label and detect objects
+- [x] Filter and display response
+- [x] UI modifications
 
 ### Installation
 After cloning this repository, migrate to ```edu_app``` folder. Then, follow the following steps:
@@ -28,5 +29,4 @@ After cloning this repository, migrate to ```edu_app``` folder. Then, follow the
 
 **Client**: 
 - Flutter (cross-platform UI development kit create by Google): [intro](https://youtu.be/l-YO9CmaSUM) | [docs](https://docs.flutter.dev/) 
-- GetX (light and powerful framework for flutter): [intro](https://youtu.be/V0oxG3tWiwk) | [docs](https://chornthorn.github.io/getx-docs/) 
 - ML Kit (machine learning kit for mobile app created by Google): [intro](https://youtu.be/CQ8iEqblWtY) | [docs](https://developers.google.com/ml-kit/) 
