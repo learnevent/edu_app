@@ -1,5 +1,5 @@
 import 'package:google_mlkit_image_labeling/google_mlkit_image_labeling.dart';
-import 'package:google_mlkit_object_detection/google_mlkit_object_detection.dart';
+// import 'package:google_mlkit_object_detection/google_mlkit_object_detection.dart';
 
 String formatLabelList(
     // List<ImageLabel> labeledObjects, List<DetectedObject> detectedObjects) {

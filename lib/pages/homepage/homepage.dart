@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:progress_indicators/progress_indicators.dart';
 import 'package:google_mlkit_image_labeling/google_mlkit_image_labeling.dart';
 // import 'package:google_mlkit_object_detection/google_mlkit_object_detection.dart';
 import 'format_label_list.dart';
@@ -51,7 +52,18 @@ class _HomePageState extends State<HomePage> {
                   width: 600,
                   child: Image.file(File(imageFile!.path)),
                 ),
-              if (checking == true) const CircularProgressIndicator(),
+              if (checking == true)
+                // JumpingDotsProgressIndicator(
+                //   fontSize: 100.0,
+                //   color: Colors.white,
+                // ),
+                GlowingProgressIndicator(
+                  duration: const Duration(milliseconds: 150),
+                  child: const Icon(
+                    Icons.visibility_sharp,
+                    size: 100.0,
+                  ),
+                ),
               Text(
                 scannedText,
                 style: const TextStyle(fontSize: 25),
