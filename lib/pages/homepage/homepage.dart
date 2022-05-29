@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:progress_indicators/progress_indicators.dart';
 import 'package:google_mlkit_image_labeling/google_mlkit_image_labeling.dart';
-// import 'package:google_mlkit_object_detection/google_mlkit_object_detection.dart';
+import 'package:google_mlkit_object_detection/google_mlkit_object_detection.dart';
 import 'format_label_list.dart';
 
 class HomePage extends StatefulWidget {
@@ -99,13 +99,13 @@ class _HomePageState extends State<HomePage> {
 
   void processImage(ImageSource source) async {
     final imageLabeler =
-        ImageLabeler(options: ImageLabelerOptions(confidenceThreshold: 0.5));
+        ImageLabeler(options: ImageLabelerOptions(confidenceThreshold: 0.6));
 
-    // final objectDetector = ObjectDetector(
-    //     options: ObjectDetectorOptions(
-    //         mode: DetectionMode.singleImage,
-    //         classifyObjects: false,
-    //         multipleObjects: false));
+    final objectDetector = ObjectDetector(
+        options: ObjectDetectorOptions(
+            mode: DetectionMode.singleImage,
+            classifyObjects: true,
+            multipleObjects: true));
 
     try {
       imageFile = null;
@@ -123,12 +123,12 @@ class _HomePageState extends State<HomePage> {
             await imageLabeler.processImage(inputImage);
         await imageLabeler.close();
 
-        // List<DetectedObject> detectedObjects =
-        //     await objectDetector.processImage(inputImage);
-        // await objectDetector.close();
+        List<DetectedObject> detectedObjects =
+            await objectDetector.processImage(inputImage);
+        await objectDetector.close();
+        scannedText = formatLabelList(labeledObjects, detectedObjects);
+        // scannedText = formatLabelList(labeledObjects);
 
-        // scannedText = formatLabelList(labeledObjects, detectedObjects);
-        scannedText = formatLabelList(labeledObjects);
         checking = false;
         setState(() {});
       }
