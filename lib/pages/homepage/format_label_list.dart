@@ -22,11 +22,6 @@ String formatLabelList(
     textBody = textBody + 'No objects detected \n';
   } else {
     for (DetectedObject object in detectedObjects) {
-      var bottom = object.boundingBox.bottom;
-      var top = object.boundingBox.top;
-      var left = object.boundingBox.left;
-      var right = object.boundingBox.right;
-
       if (object.labels.isEmpty) {
         textBody = textBody + 'No labels detected \n\nBoundries detected\n';
       } else {
@@ -36,7 +31,10 @@ String formatLabelList(
           textBody = textBody + '[$confidence%] = ${label.text} \n';
         }
       }
-
+      double bottom = object.boundingBox.bottom;
+      double top = object.boundingBox.top;
+      double left = object.boundingBox.left;
+      double right = object.boundingBox.right;
       textBody = textBody + '($bottom, $top. $left, $right)  \n\n';
     }
   }
