@@ -77,6 +77,8 @@ class _HomePageState extends State<HomePage> {
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.photo), label: 'gallery'),
           BottomNavigationBarItem(icon: Icon(Icons.camera), label: 'camera'),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.play_arrow_outlined), label: 'video'),
         ],
         onTap: _changeIndex,
         currentIndex: _currentIndex,
@@ -94,6 +96,10 @@ class _HomePageState extends State<HomePage> {
 
     if (_currentIndex == 1) {
       processImage(ImageSource.camera);
+    }
+
+    if (_currentIndex == 2) {
+      Navigator.of(context).pushNamed('/video', arguments: 'Hello');
     }
   }
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'pages/homepage/homepage.dart';
-import 'utils/colors.dart';
+import 'package:edu_app/utils/colors.dart';
+import 'package:edu_app/route_generator.dart';
 
 void main() {
   runApp(
@@ -18,7 +18,8 @@ class MyApp extends StatelessWidget {
       title: 'Learn Event',
       theme:
           ThemeData.dark().copyWith(scaffoldBackgroundColor: backgroundColor),
-      home: const HomePage(),
+      onGenerateRoute: (RouteSettings settings) =>
+          RouteGenerator.generateRoute(settings),
     );
   }
 }
