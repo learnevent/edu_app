@@ -1,5 +1,5 @@
 import 'package:edu_app/pages/video/video.dart';
-import 'package:edu_app/pages/homepage/home.dart';
+import 'package:edu_app/pages/homepage/homepage.dart';
 import 'package:flutter/material.dart';
 
 class RouteGenerator {
