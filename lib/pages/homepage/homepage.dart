@@ -113,6 +113,11 @@ class _HomePageState extends State<HomePage> {
     }
 
     if (_currentIndex == 2) {
+      void submit() {
+        Navigator.of(context).pop(controller.text);
+        controller.clear();
+      }
+
       final keyword = await showDialog<String>(
           context: context,
           builder: (context) => AlertDialog(
@@ -121,14 +126,10 @@ class _HomePageState extends State<HomePage> {
                   autofocus: true,
                   decoration: const InputDecoration(hintText: ".."),
                   controller: controller,
+                  onSubmitted: (_) => submit,
                 ),
                 actions: [
-                  TextButton(
-                      onPressed: () {
-                        Navigator.of(context).pop(controller.text);
-                        controller.clear();
-                      },
-                      child: const Text('Submit'))
+                  TextButton(onPressed: submit, child: const Text('Submit'))
                 ],
               ));
 
