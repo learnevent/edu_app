@@ -14,6 +14,20 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  late TextEditingController controller;
+
+  @override
+  void initState() {
+    super.initState();
+    controller = TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
+  }
+
   int _currentIndex = 0;
 
   XFile? imageFile;
@@ -86,7 +100,7 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  void _changeIndex(int value) {
+  void _changeIndex(int value) async {
     _currentIndex = value;
     scannedText = "";
 
@@ -99,7 +113,26 @@ class _HomePageState extends State<HomePage> {
     }
 
     if (_currentIndex == 2) {
-      Navigator.of(context).pushNamed('/video', arguments: 'Hello');
+      final keyword = await showDialog<String>(
+          context: context,
+          builder: (context) => AlertDialog(
+                title: const Text('Enter Keyword'),
+                content: TextField(
+                  autofocus: true,
+                  decoration: const InputDecoration(hintText: ".."),
+                  controller: controller,
+                ),
+                actions: [
+                  TextButton(
+                      onPressed: () {
+                        Navigator.of(context).pop(controller.text);
+                        controller.clear();
+                      },
+                      child: const Text('Submit'))
+                ],
+              ));
+
+      Navigator.of(context).pushNamed('/video', arguments: keyword);
     }
   }
 
@@ -143,10 +176,5 @@ class _HomePageState extends State<HomePage> {
       scannedText = "Error occured while scanning";
       setState(() {});
     }
-  }
-
-  @override
-  void initState() {
-    super.initState();
   }
 }

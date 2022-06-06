@@ -1,23 +1,23 @@
 import 'package:flutter/material.dart';
 
 class VideoPage extends StatelessWidget {
-  const VideoPage({Key? key, required this.data}) : super(key: key);
-  final String data;
+  const VideoPage({Key? key, required this.keyword}) : super(key: key);
+  final String keyword;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text(data),
+        title: const Text('video player'),
       ),
       body: Center(
         child: SingleChildScrollView(
           child: Column(
-            children: const [
+            children: [
               Text(
-                'Hello',
-                style: TextStyle(fontSize: 25),
+                'Keyword: $keyword',
+                style: const TextStyle(fontSize: 25),
                 textAlign: TextAlign.left,
               ),
             ],
