@@ -3,7 +3,6 @@ import 'package:google_mlkit_object_detection/google_mlkit_object_detection.dart
 
 String formatLabelList(
     List<ImageLabel> labeledObjects, List<DetectedObject> detectedObjects) {
-  // List<ImageLabel> labeledObjects) {
   String textBody = '\n';
 
   textBody = textBody + '---image_labeling_results---\n \n';
