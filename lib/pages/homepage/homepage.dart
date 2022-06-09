@@ -77,28 +77,31 @@ class HomePage extends HookConsumerWidget {
             ref.read(scannedTextProvider.state).state = '';
           }
           if (index == 1) {
-            void submit() {
-              Navigator.of(context).pop(controller.text);
-              controller.clear();
-            }
+            // ? A Test Dialog UI to pass in keyword to video page
+            // void submit() {
+            //   Navigator.of(context).pop(controller.text);
+            //   controller.clear();
+            // }
 
-            final keyword = await showDialog<String>(
-                context: context,
-                builder: (context) => AlertDialog(
-                      title: const Text('Enter Keyword'),
-                      content: TextField(
-                        autofocus: true,
-                        decoration: const InputDecoration(hintText: ".."),
-                        controller: controller,
-                        onSubmitted: (_) => submit,
-                      ),
-                      actions: [
-                        TextButton(
-                            onPressed: submit, child: const Text('Submit'))
-                      ],
-                    ));
+            // final keyword = await showDialog<String>(
+            //     context: context,
+            //     builder: (context) => AlertDialog(
+            //           title: const Text('Enter Keyword'),
+            //           content: TextField(
+            //             autofocus: true,
+            //             decoration: const InputDecoration(hintText: ".."),
+            //             controller: controller,
+            //             onSubmitted: (_) => submit,
+            //           ),
+            //           actions: [
+            //             TextButton(
+            //                 onPressed: submit, child: const Text('Submit'))
+            //           ],
+            //         ));
 
-            Navigator.of(context).pushNamed('/video', arguments: keyword);
+            // ? Simulating passing data in Navigator arguments
+            // TODO: Cleanup and pass keyword when video option is selected
+            Navigator.of(context).pushNamed('/video', arguments: 'apple');
           }
         },
       ),

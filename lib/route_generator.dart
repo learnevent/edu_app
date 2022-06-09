@@ -10,7 +10,7 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => HomePage());
       case '/video':
         if (args is String) {
-          return MaterialPageRoute(builder: (_) => VideoPage(keyword: args));
+          return MaterialPageRoute(builder: (_) => VideoPage());
         }
         return _errorRoute();
       default:
