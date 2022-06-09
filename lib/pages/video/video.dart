@@ -11,14 +11,13 @@ class VideoPage extends StatefulWidget {
 
 class _VideoPageState extends State<VideoPage> {
   late VideoPlayerController controller;
-  String urlVideo =
-      'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4';
+  String urlVideo = 'assets/video.mp4';
 
   @override
   void initState() {
     super.initState();
 
-    controller = VideoPlayerController.network(urlVideo)
+    controller = VideoPlayerController.asset(urlVideo)
       ..addListener(() => setState(() {}))
       ..setLooping(true)
       ..initialize().then((_) => {setState(() {}), controller.play()});
