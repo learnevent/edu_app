@@ -11,7 +11,7 @@ class VideoPage extends StatefulWidget {
 
 class _VideoPageState extends State<VideoPage> {
   late VideoPlayerController controller;
-  String urlVideo = 'assets/video.mp4';
+  String urlVideo = 'assets/video_hd.mp4';
 
   @override
   void initState() {

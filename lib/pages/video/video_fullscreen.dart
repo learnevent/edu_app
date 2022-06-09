@@ -28,6 +28,8 @@ class VideoPlayerFullScreen extends StatelessWidget {
 
     return FittedBox(
         fit: BoxFit.cover,
-        child: SizedBox(width: width, height: height, child: child));
+        // ? Research more about Aspect ratio
+        // ? Aspect raito needs modification for different devices (The 1.06 is custom for test device)
+        child: SizedBox(width: width * 1.06, height: height, child: child));
   }
 }
