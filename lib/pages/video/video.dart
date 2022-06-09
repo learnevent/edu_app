@@ -1,26 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-class VideoPage extends StatelessWidget {
+class VideoPage extends HookConsumerWidget {
   const VideoPage({Key? key, required this.keyword}) : super(key: key);
   final String keyword;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('video player'),
+        title: const Text('Video'),
       ),
       body: Center(
         child: SingleChildScrollView(
           child: Column(
-            children: [
-              Text(
-                'Keyword: $keyword',
-                style: const TextStyle(fontSize: 25),
-                textAlign: TextAlign.left,
-              ),
-            ],
+            children: [Text(keyword)],
           ),
         ),
       ),
