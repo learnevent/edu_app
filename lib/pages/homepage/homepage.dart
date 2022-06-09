@@ -77,12 +77,12 @@ class HomePage extends HookConsumerWidget {
             ref.read(scannedTextProvider.state).state = '';
           }
           if (index == 1) {
-            void submit() {
-              Navigator.of(context).pop(controller.text);
-              controller.clear();
-            }
-
             // ? A Test Dialog UI to pass in keyword to video page
+            // void submit() {
+            //   Navigator.of(context).pop(controller.text);
+            //   controller.clear();
+            // }
+
             // final keyword = await showDialog<String>(
             //     context: context,
             //     builder: (context) => AlertDialog(
