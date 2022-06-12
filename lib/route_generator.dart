@@ -1,5 +1,5 @@
 import 'package:edu_app/pages/video/video.dart';
-import 'package:edu_app/pages/video_player/chewie_video.dart';
+import 'package:edu_app/pages/video_player/video_player.dart';
 import 'package:edu_app/pages/homepage/homepage.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +11,7 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => HomePage());
       case '/video':
         if (args is String) {
-          return MaterialPageRoute(builder: (_) => const ChewieVideo());
+          return MaterialPageRoute(builder: (_) => const VideoPlayer());
         }
         return _errorRoute();
       default:
