@@ -8,7 +8,7 @@ class VideoPlayer extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Scaffold(
       appBar: AppBar(
-        title: const Text('Chewie Player'),
+        title: const Text('Video Player'),
       ),
       body: VideoItem(
         videoPlayerController:
