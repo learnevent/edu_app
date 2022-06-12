@@ -14,6 +14,7 @@ class ChewieVideo extends StatelessWidget {
         body: ChewieItem(
           videoPlayerController:
               VideoPlayerController.asset('assets/video_hd.mp4'),
+          // VideoPlayerController.network('url'),
           looping: true,
         ),
       );
