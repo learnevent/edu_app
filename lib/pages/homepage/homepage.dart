@@ -66,6 +66,8 @@ class HomePage extends HookConsumerWidget {
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
           BottomNavigationBarItem(
+              icon: Icon(Icons.control_camera_rounded), label: 'Live'),
+          BottomNavigationBarItem(
               icon: Icon(Icons.play_arrow_outlined), label: 'Video'),
         ],
         onTap: (int index) async {
@@ -76,7 +78,12 @@ class HomePage extends HookConsumerWidget {
             ref.read(pathProvider.state).state = '';
             ref.read(scannedTextProvider.state).state = '';
           }
+
           if (index == 1) {
+            Navigator.of(context).pushNamed('/camera');
+          }
+
+          if (index == 2) {
             // ? A Test Dialog UI to pass in keyword to video page
             // void submit() {
             //   Navigator.of(context).pop(controller.text);
@@ -105,7 +112,7 @@ class HomePage extends HookConsumerWidget {
           }
         },
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
       //Init Floating Action Bubble
       floatingActionButton: FloatingActionButton(
         // Menu items

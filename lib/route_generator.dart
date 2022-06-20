@@ -1,7 +1,8 @@
-import 'package:edu_app/pages/video/video.dart';
-import 'package:edu_app/pages/video_player/video_player.dart';
-import 'package:edu_app/pages/homepage/homepage.dart';
 import 'package:flutter/material.dart';
+import 'package:edu_app/main.dart';
+import 'package:edu_app/pages/video_player/video_player.dart';
+import 'package:edu_app/pages/camera/camera.dart';
+import 'package:edu_app/pages/homepage/homepage.dart';
 
 class RouteGenerator {
   static Route<dynamic>? generateRoute(RouteSettings settings) {
@@ -14,6 +15,11 @@ class RouteGenerator {
           return MaterialPageRoute(builder: (_) => const VideoPlayer());
         }
         return _errorRoute();
+      case '/camera':
+        return MaterialPageRoute(
+            builder: (_) => CameraApp(
+                  cameras: cameras,
+                ));
       default:
         return _errorRoute();
     }
