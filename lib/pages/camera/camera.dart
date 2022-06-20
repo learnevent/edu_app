@@ -196,7 +196,7 @@ class _CameraAppState extends State<CameraApp> {
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
         title: Text("Live Stream Detection"),
-        backgroundColor: Colors.black87,
+        backgroundColor: _isAnalysisOn ? Colors.green : Colors.black87,
       ),
       body: Center(
           child: SingleChildScrollView(
